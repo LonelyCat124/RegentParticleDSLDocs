@@ -10,6 +10,14 @@ Welcome to RegentParticleDSL's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+This is RegentParticleDSL's documentation. RegentParticleDSL is a DSL for particle methods using the
+Regent programming language (http://regent-lang.org/)
+
+
+
+
+
+
 
 
 Indices and tables
