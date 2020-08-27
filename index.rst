@@ -16,6 +16,7 @@ Regent programming language (http://regent-lang.org/)
 
    intro/install
    intro/syntax
+   intro/DSL
 
 
 
