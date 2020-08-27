@@ -6,13 +6,16 @@
 Welcome to RegentParticleDSL's documentation!
 =============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-   intro/install
-
 This is RegentParticleDSL's documentation. RegentParticleDSL is a DSL for particle methods using the
 Regent programming language (http://regent-lang.org/)
+
+
+
+.. toctree::
+   :maxdepth: 2
+
+   intro/install
+
 
 
 
