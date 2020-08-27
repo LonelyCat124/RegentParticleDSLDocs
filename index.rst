@@ -15,7 +15,7 @@ Regent programming language (http://regent-lang.org/)
    :maxdepth: 2
 
    intro/install
-
+   intro/syntax
 
 
 
