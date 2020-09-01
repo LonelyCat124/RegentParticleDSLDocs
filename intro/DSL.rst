@@ -40,7 +40,8 @@ into the ``fspace``::
 The ``neighbour_part_space`` is an opaque ``fspace`` which is used by the neighbour search algorithms, and may contain nothing. This should not be used
 in kernel code.
 
-The ``core_part_space`` contains a set of variables that all particles are likely to have. This is declared in ``src/particles/core_part.rg``, and contains::
+The ``core_part_space`` contains a set of variables that all particles are likely to have. This is declared in ``src/particles/core_part.rg``,
+and contains::
   fspace core_part{
     pos_x : double,
     pos_y : double,
