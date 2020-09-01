@@ -40,7 +40,8 @@ into the ``fspace``::
 The ``neighbour_part_space`` is an opaque ``fspace`` which is used by the neighbour search algorithms, and may contain nothing. This should not be used
 in kernel code.
 
-The ``core_part_space`` contains a set of variables that all particles are likely to have. This is declared in ``src/particles/core_part.rg``, and contains::
+The ``core_part_space`` contains a set of variables that all particles are likely to have. This is declared in ``src/particles/core_part.rg``,
+and contains::
   fspace core_part{
     pos_x : double,
     pos_y : double,
@@ -67,7 +68,8 @@ Pairwise kernels are computed on all particle pairs which are within their ``cut
 assume a fixed global cutoff, while others will allow for per-particle cutoffs. The documentation for the neighbour search algorithms 
 will discuss the specifics.
 
-A pairwise kernel has the following declaration::
+A pairwise kernel has the following 
+declaration::
   function pairwise_kernel_name( part1, part2, r2 )
     local kernel = rquote
       --Kernel code goes here
@@ -82,7 +84,8 @@ Per-particle Kernel
 
 Per-particle kernels are applied to all particles in the system. 
 
-A per-particle kernel has the following declaration::
+A per-particle kernel has the following 
+declaration::
    function per_particle_kernel_name( part, config)
      local kernel = rquote
        --Kernel code goes here
@@ -105,7 +108,8 @@ algorithm, check the appropriate module's documentation.
 Main Program
 --------------
 
-The main program is broken into a few sections. The overall file structure would usually be similar to::
+The main program is broken into a few sections. 
+The overall file structure would usually be similar to::
     import "regent"
     require("defaults")
     require("other/headers/needed")
@@ -132,7 +136,8 @@ The main body of the method is free to be defined however you want, with the onl
 2) Explicit user-created Regent tasks
 3) Code that only affects local variables
 
-An example of this might be::
+An example of this 
+might be::
     local timestepping_task = run_per_particle_task( timestep )
     local interaction_task = create_symmetric_pairwise_runner( kernel )
 
