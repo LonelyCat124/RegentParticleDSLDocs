@@ -62,6 +62,7 @@ Different types of Kernel are available in RegentParticleDSL. At the moment, pai
 
 Pairwise Kernel
 ^^^^^^^^^^^^^^^
+
 Pairwise kernels are computed on all particle pairs which are within their ``cutoff`` radii. Certain neighbour search algorithms may
 assume a fixed global cutoff, while others will allow for per-particle cutoffs. The documentation for the neighbour search algorithms 
 will discuss the specifics.
@@ -78,6 +79,7 @@ The values in the particles can be freely modified, and local variables can be c
 
 Per-particle Kernel
 ^^^^^^^^^^^^^^^^^^^
+
 Per-particle kernels are applied to all particles in the system. 
 
 A per-particle kernel has the following declaration::
