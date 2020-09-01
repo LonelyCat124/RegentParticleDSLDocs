@@ -16,8 +16,9 @@ Regent programming language (http://regent-lang.org/)
 
    intro/install
    intro/syntax
-
-
+   intro/DSL
+   io_modules/io
+   neighbour_search/cell_pair
 
 
 

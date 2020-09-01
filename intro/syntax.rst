@@ -6,7 +6,8 @@ This section of the documentation is dedicated to features of the Regent program
 from more commonly used languages, such as Python or C.
 
 Headers
--------------
+-------
+
 All files used with RegentParticleDSL must begin with the same first line::
     import "regent"
 
@@ -20,7 +21,8 @@ also be used, however relative paths using dots (e.g. ``../path``) are not possi
 
 Comments
 --------
-Comments in regent are inline comments, and start with ``--``. 
+
+Comments in Regent are inline comments, and start with ``--``. 
 
 Local and global variables
 --------------------------
@@ -35,6 +37,7 @@ This can be avoided by using the ``local`` flag, e.g::
 
 Regent or Lua
 -------------
+
 Most code users write in RegentParticleDSL is Lua, with only code inside particle structures, kernels and
 the main program having Regent's specific syntax. Regent variables are declared as::
     var int_variable : int = 1
