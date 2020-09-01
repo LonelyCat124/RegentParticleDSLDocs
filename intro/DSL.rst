@@ -101,7 +101,7 @@ After this call, the ``per_particle_function`` call is usable in the main progra
 algorithm, check the appropriate module's documentation.
 
 Main Program
-------------
+--------------
 
 The main program is broken into a few sections. The overall file structure would usually be similar to::
     import "regent"
@@ -123,7 +123,7 @@ IO modules will contain an initialisation function, which can be used with::
 For details on the initialisation (and finalisation or other IO functions), check the appropriate IO module's documentation.
 
 The timestepping loop
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 The main body of the method is free to be defined however you want, with the only limitation that all functions used must be either:
 1) Tasks defined through the DSL's code generation
