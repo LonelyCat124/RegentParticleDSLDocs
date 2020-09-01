@@ -116,5 +116,34 @@ The main program is broken into a few sections. The overall file structure would
 
 This code sets up the headers and file, and the ``regentlib.start(main)`` call starts the program on the ``main`` task.
 
-Inside the ``main`` task there are a few section. First the code needs to initialise the data structures
+Inside the ``main`` task there are a few section. First the code needs to initialise the data structures. At the moment this is done manually, however 
+IO modules will contain an initialisation function, which can be used with::
+    [initialisation(variables, other arguments)];
+
+For details on the initialisation (and finalisation or other IO functions), check the appropriate IO module's documentation.
+
+The timestepping loop
+^^^^^^^^^^^^^^^^^^^^^
+
+The main body of the method is free to be defined however you want, with the only limitation that all functions used must be either:
+1) Tasks defined through the DSL's code generation
+2) Explicit user-created Regent tasks
+3) Code that only affects local variables
+
+An example of this might be::
+    local timestepping_task = run_per_particle_task( timestep )
+    local interaction_task = create_symmetric_pairwise_runner( kernel )
+
+    task main()
+      [initialisation(variables)];
+      var time = 0.0
+      var timestep = 0.001
+      while(time < 1.0) do
+        interaction_task(...)
+        timestepping_task(...)
+        time = timestep + time
+      end
+    [finalisation(variables)];
+    end
+    
 
